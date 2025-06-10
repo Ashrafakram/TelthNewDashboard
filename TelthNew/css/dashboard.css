@@ -23,22 +23,35 @@
 @import url(assets/vendor_components/date-paginator/bootstrap-datepaginator.min.css);
 @import url(assets/vendor_components/bootstrap-daterangepicker/daterangepicker.css);
 @import url(assets/vendor_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css);
-@import url(assets/vendor_components/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css);
-@import url(assets/vendor_components/bootstrap-select/dist/css/bootstrap-select.css);
-@import url(assets/vendor_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css);
-@import url(assets/vendor_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.css);
-@import url(assets/vendor_components/raty-master/lib/jquery.raty.css);
-@import url(assets/vendor_components/ion-rangeSlider/css/ion.rangeSlider.css);
-@import url(assets/vendor_components/ion-rangeSlider/css/ion.rangeSlider.skinModern.css);
+
+@import url(assets/vendor_components/bootstrap-colorpicker/bootstrap-colorpicker.min.css);
+@import url(assets/vendor_components/bootstrap-select/bootstrap-select.css);
+
+@import url(assets/vendor_components/bootstrap-tagsinput/bootstrap-tagsinput.css);
+
+@import url(assets/vendor_components/bootstrap-touchspin/jquery.bootstrap-touchspin.css);
+
+@import url(assets/vendor_components/raty-master/jquery.raty.css);
+
+@import url(assets/vendor_components/ion-rangeSlider/rangeSlider.css);
+@import url(assets/vendor_components/ion-rangeSlider/rangeSlider.skinModern.css);
+
 @import url(assets/vendor_components/gridstack/gridstack.css);
-@import url(assets/vendor_components/jquery-toast-plugin-master/src/jquery.toast.css);
+
+@import url(assets/vendor_components/src/jquery.toast.css);
+
 @import url(assets/vendor_components/nestable/nestable.css);
+
 @import url(assets/vendor_components/bootstrap-switch/switch.css);
 @import url(assets/vendor_components/c3/c3.min.css);
 @import url(assets/vendor_components/chartist-js-develop/chartist.css);
+
 @import url(assets/vendor_plugins/bootstrap-slider/slider.css);
-@import url(assets/vendor_plugins/iCheck/flat/blue.css);
-@import url(assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css);
+
+@import url(assets/vendor_plugins/blue.css);
+
+@import url(assets/vendor_plugins/bootstrap3-wysihtml5.min.css);
+
 @import url(assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css);
 @import url(assets/vendor_plugins/iCheck/all.css);
 @import url(assets/vendor_plugins/timepicker/bootstrap-timepicker.min.css);
