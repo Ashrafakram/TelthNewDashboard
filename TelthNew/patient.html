@@ -209,7 +209,80 @@
         width: 100%;
       }
     }
-  
+    .patient {
+      display: flex;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .left-section {
+      flex: 1 1 70%;
+      padding: 20px 30px;
+    }
+    .right-section {
+      flex: 1 1 30%;
+      background-color: #2196f3;
+      color: white;
+      padding: 25px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .profile-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .status-badge {
+      background-color: #28a745;
+      color: #fff;
+      font-size: 12px;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    .btn-icon {
+      width: 34px;
+      height: 34px;
+      background-color: #e0f0ff;
+      color: #2196f3;
+      border-radius: 50%;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 8px;
+    }
+    hr {
+      border-top: 1px solid #ddd;
+    }
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #555;
+    }
+    .section-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: #000;
+    }
+    .weather-badge {
+      background-color: rgba(255,255,255,0.3);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+      display: inline-block;
+    }
+    .consult-input {
+      border: none;
+      border-radius: 4px;
+      padding: 6px 10px;
+      margin-top: 4px;
+      width: 100%;
+    }
   </style>
 <!-- Font Awesome CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -243,71 +316,99 @@
 				
 				<div class="col-xl-8 col-12">
 
-                    <!-- <div class="box"> -->
-                        <div class="card p-4">
-                            <div class="row g-4 align-items-center">
+                    <div class="box">
+                        <!-- <div class="card p-4"> -->
+                            <div class="container patient">
+                                <!-- <div class="patient-card"> -->
+                                  <!-- Left Section -->
+                                    <div class="left-section">
+                                      <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <div class="d-flex align-items-center">
+                                          <img src="images/avatar/smith.png" alt="Profile" class="profile-img me-3" />
+                                          <div>
+                                            <h5 class="mb-1 fw-bold">
+                                              Steve Smith 
+                                              <span class="status-badge">active</span>
+                                            </h5>
+                                            <small>36 Yrs, Male &nbsp; | &nbsp; Marital_status:  Married</small>
+                                          </div>
+                                        </div>
+                                        <div>
+                                          <button class="btn btn-outline-primary btn-sm me-2">Initiate New Visit</button>
+                                          <button class="btn-icon"><i class="bi bi-camera-video-fill"></i></button>
+                                          <button class="btn-icon"><i class="bi bi-telephone-fill"></i></button>
+                                        </div>
+                                      </div>
 
-                            <!-- Left: Profile Info -->
-                            <div class="col-md-5 text-center">
-                                <img src="images/avatar/user.png" alt="Profile" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
-                                <h5 class="mb-1 fw-bold">Bess Willis</h5>
-                                <p class="text-muted small">27 years, California</p>
+                                      <hr />
 
-                                <div class="row mt-3">
-                                <div class="col-4 text-primary">
-                                    <div class="small">Weight</div>
-                                    <strong>60kg</strong>
-                                </div>
-                                <div class="col-4 text-success">
-                                    <div class="small">Height</div>
-                                    <strong>170cm</strong>
-                                </div>
-                                <div class="col-4 text-info">
-                                    <div class="small">Goal</div>
-                                    <strong>55kg</strong>
-                                </div>
-                                </div>
+                                      <div class="row mb-3">
+                                        <div class="col-md-4 col-xl-4">
+                                          <div class="section-label">Blood_group</div>
+                                          <div class="section-value">O+</div>
+                                        </div>
+                                        <div class="col-md-4 col-xl-4">
+                                          <div class="section-label">Email</div>
+                                          <div class="section-value">smith@aus.com</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="section-label">G_med_id</div>
+                                          <div class="section-value">5229103618406</div>
+                                        </div>
+                                      </div>
+                              <hr>
+                                      <div class="row mb-3">
+                                        <div class="col-md-4">
+                                          <div class="section-label">Height</div>
+                                          <div class="section-value">170cm</div>
+                                        </div>
+                                      
+                                        <div class="col-md-4">
+                                          <div class="section-label">Weight</div>
+                                          <div class="section-value">75Kg</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="section-label">Address</div>
+                                          <div class="section-value">795 Ave Rockland, Outremont, Montreal, Australia</div>
+                                        </div>
+                                      </div>
+                              <hr>
+                                      <div class="row">
+                                        <div class="col-md-4">
+                                          <div class="section-label">Date_Of_Birth</div>
+                                          <div class="section-value">06/02/1989</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="section-label">Assigned Doctor</div>
+                                          <div class="section-value">Audrey Smith</div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="section-label">Emergency_Contact</div>
+                                          <div class="section-value d-flex align-items-center">
+                                            9344890724 &nbsp;\ &nbsp; <i class="bi bi-telephone ms-1"></i>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- Right Section -->
+                                    <!-- <div class="right-section">
+                                      <div>
+                                        <div class="weather-badge mb-3">🌤️ 24°C</div>
+                                        <div class="mb-4">
+                                          <div class="fw-semibold">Good Morning</div>
+                                          <h6 class="fw-bold">Dr. Audrey Graham</h6>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <label class="form-label text-white">Consultation notes:</label>
+                                        <input type="text" class="consult-input" placeholder="Type" />
+                                      </div>
+                                    </div> -->
+                                <!-- </div> -->
                             </div>
-
-                            <!-- Right: Details -->
-                            <div class="col-md-7">
-                                <div class="row g-3">
-                                <div class="col-md-6">
-                                    <small class="text-muted">Date of Birth</small>
-                                    <div><b>1997-05-12</b></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <small class="text-muted">Gender</small>
-                                    <div><b>Female</b></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <small class="text-muted">Mobile No</small>
-                                    <div><b>+1 234 567 8901</b></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <small class="text-muted">Email</small>
-                                    <div><b>bess.willis@example.com</b></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <small class="text-muted">City</small>
-                                    <div><b>Los Angeles</b></div>
-                                </div>
-                                <div class="col-md-6">
-                                    <small class="text-muted">State</small>
-                                    <div><b>California</b></div>
-                                </div>
-                                
-                                <div class="col-md-6">
-                                    <small class="text-muted">Zip Code</small>
-                                    <div><b>90001</b></div>
-                                </div>
-                                </div>
-                                
-                            </div>
-
-                            </div>
-                        </div>
-                    <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
 
 					<div class="row">
 						<div class="col-xl-6 col-12 ">
@@ -705,140 +806,148 @@
 				</div>
                 <div class="col-xl-4 col-12">
 								
-					<div class="box">
-                        <!-- <div class="container mt-4"> -->
-                            <div class="doctor-card">
-                                <h6 class="mb-3 text-primary">Care Plan</h6>
-                                <div class="row align-items-center">
-                                <div class="col-12 col-sm-8 d-flex align-items-center mb-3 mb-sm-0">
-                                    <img src="images/avatar/care.png" alt="Doctor" class="doctor-img me-3">
-                                    <div>
-                                    <h6 class="mb-1">Johen Doe</h6>
-                                    <small class="text-muted d-block">MathsTeacher</small>
-                                    <div class="star-rating">★ ★ ★ ★ ★</div>
-                                    <div class="text-muted">$100</div>
-                                    <strong>Payment Status:</strong><br>
-                                    <span class="text-success">Paid</span>
+                  <div class="box">
+                      <!-- <div class="container mt-4"> -->
+                          <div class="doctor-card">
+                              <h6 class="mb-3 text-primary">Care Plan</h6>
+                              <div class="row align-items-center">
+                              <div class="col-12 col-sm-8 d-flex align-items-center mb-3 mb-sm-0">
+                                  <img src="images/avatar/raina.png" alt="Doctor" class="doctor-img me-3">
+                                  <div>
+                                  <h6 class="mb-1">Johen Doe</h6>
+                                  <!-- <small class="text-muted d-block">MathsTeacher</small> -->
+                                  <!-- <div class="star-rating">★ ★ ★ ★ ★</div> -->
+                                  <div class="text-muted">$100</div>
+                                  <div class="row">
+                                    <div class="col-xl-6">
+                                      <strong>Payment Status:</strong><br>
+                                      <span class="text-success">Paid</span><br>
                                     </div>
-                                </div>
-                                <div class="col-12 col-sm-4 d-flex justify-content-sm-end gap-2 flex-wrap">
-                                    <button class="btn btn-danger btn-sm-custom" data-bs-toggle="modal" data-bs-target="#doctorModal">Expired</button>
-                                    <button class="btn btn-success btn-sm-custom" data-bs-toggle="modal" data-bs-target="#doctorModals">Active</button>
-                                </div>
-                                </div>
-                            </div>
-                        <!-- </div> -->
+                                    <div class="col-xl-6">
+                                      <strong>Payment Type:</strong><br>
+                                      <span class="text-success">Subscription</span>
+                                    </div>
+                                  </div>
+                                  </div>
+                              </div>
+                              <div class="col-12 col-sm-4 d-flex justify-content-sm-end gap-2 flex-wrap">
+                                  <button class="btn btn-danger btn-sm-custom h-30 fs-12" data-bs-toggle="modal" data-bs-target="#doctorModal">Expired</button>
+                                  <button class="btn btn-success btn-sm-custom h-30 fs-12" data-bs-toggle="modal" data-bs-target="#doctorModals">Active</button>
+                              </div>
+                              </div>
+                          </div>
+                      <!-- </div> -->
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="doctorModal" tabindex="-1" aria-labelledby="doctorModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="doctor-card">
-                                <h5 class="mb-3 text-primary">CarePlan</h5>
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                    <img src="images/avatar/user.png" alt="Doctor" class="doctor-img">
-                                    </div>
-                                    <div class="col">
-                                    <h6 class="mb-0">Johen Doe</h6>
-                                    <small class="text-muted">MathsTeacher</small><br>
-                                    <div class="star-rating">★ ★ ★ ★ ★</div>
-                                    <div class="text-muted">$100</div>
-                                    </div>
-                                    <div class="col-auto text-end mt-3 mt-sm-0">
-                                    <button class="btn btn-outline-danger mb-2">Unassign</button><br>
-                                    <button class="btn btn-outline-success">Check</button>
-                                    </div>
-                                </div>
+                      <!-- Modal -->
+                      <div class="modal fade" id="doctorModal" tabindex="-1" aria-labelledby="doctorModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <div class="modal-content">
+                          <div class="modal-body">
+                              <div class="doctor-card">
+                              <h5 class="mb-3 text-primary">CarePlan</h5>
+                              <div class="row align-items-center">
+                                  <div class="col-auto">
+                                  <img src="images/avatar/user.png" alt="Doctor" class="doctor-img">
+                                  </div>
+                                  <div class="col">
+                                  <h6 class="mb-0">Johen Doe</h6>
+                                  <small class="text-muted">MathsTeacher</small><br>
+                                  <div class="star-rating">★ ★ ★ ★ ★</div>
+                                  <div class="text-muted">$100</div>
+                                  </div>
+                                  <div class="col-auto text-end mt-3 mt-sm-0">
+                                  <button class="btn btn-outline-danger mb-2">Unassign</button><br>
+                                  <button class="btn btn-outline-success">Check</button>
+                                  </div>
+                              </div>
 
-                                <hr class="my-3">
+                              <hr class="my-3">
 
-                                <div class="row g-3">
-                                    <div class="col-md-4 col-6">
-                                    <strong>Start Date:</strong><br>
-                                    <span>01 Jan 2025</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                    <strong>End Date:</strong><br>
-                                    <span>31 Dec 2025</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                    <strong>Payment Method:</strong><br>
-                                    <span>Credit Card</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                        <strong>Payment Status:</strong><br>
-                                        <span class="text-success">Paid</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                    <strong>Amount Paid:</strong><br>
-                                    <span>₹5,000</span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="modal fade" id="doctorModals" tabindex="-1" aria-labelledby="doctorModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg modal-dialog-centered">
-                            <div class="modal-content">
-                            <div class="modal-body">
-                                <div class="doctor-card">
-                                <h5 class="mb-3 text-primary">CarePlan</h5>
-                                <div class="row align-items-center">
-                                    <div class="col-auto">
-                                    <img src="images/avatar/user.png" alt="Doctor" class="doctor-img">
-                                    </div>
-                                    <div class="col">
-                                    <h6 class="mb-0">Johen Doe</h6>
-                                    <small class="text-muted">MathsTeacher</small><br>
-                                    <div class="star-rating">★ ★ ★ ★ ★</div>
-                                    <div class="text-muted">$100</div>
-                                    </div>
-                                    <div class="col-auto text-end mt-3 mt-sm-0">
-                                    <button class="btn btn-outline-danger mb-2">Unassign</button><br>
-                                    <button class="btn btn-outline-success">Check</button>
-                                    </div>
-                                </div>
+                              <div class="row g-3">
+                                  <div class="col-md-4 col-6">
+                                  <strong>Start Date:</strong><br>
+                                  <span>01 Jan 2025</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                  <strong>End Date:</strong><br>
+                                  <span>31 Dec 2025</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                  <strong>Payment Method:</strong><br>
+                                  <span>Credit Card</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                      <strong>Payment Status:</strong><br>
+                                      <span class="text-success">Paid</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                  <strong>Amount Paid:</strong><br>
+                                  <span>₹5,000</span>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="modal fade" id="doctorModals" tabindex="-1" aria-labelledby="doctorModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                          <div class="modal-content">
+                          <div class="modal-body">
+                              <div class="doctor-card">
+                              <h5 class="mb-3 text-primary">CarePlan</h5>
+                              <div class="row align-items-center">
+                                  <div class="col-auto">
+                                  <img src="images/avatar/user.png" alt="Doctor" class="doctor-img">
+                                  </div>
+                                  <div class="col">
+                                  <h6 class="mb-0">Johen Doe</h6>
+                                  <small class="text-muted">MathsTeacher</small><br>
+                                  <div class="star-rating">★ ★ ★ ★ ★</div>
+                                  <div class="text-muted">$100</div>
+                                  </div>
+                                  <div class="col-auto text-end mt-3 mt-sm-0">
+                                  <button class="btn btn-outline-danger mb-2">Unassign</button><br>
+                                  <button class="btn btn-outline-success">Check</button>
+                                  </div>
+                              </div>
 
-                                <hr class="my-3">
+                              <hr class="my-3">
 
-                                <div class="row g-3">
-                                    <div class="col-md-4 col-6">
-                                    <strong>Start Date:</strong><br>
-                                    <span>01 Jan 2025</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                    <strong>End Date:</strong><br>
-                                    <span>31 Dec 2025</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                    <strong>Payment Method:</strong><br>
-                                    <span>Credit Card</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                    <strong>Payment Status:</strong><br>
-                                    <span class="text-success">Paid</span>
-                                    </div>
-                                    <div class="col-md-4 col-6">
-                                    <strong>Amount Paid:</strong><br>
-                                    <span>₹5,000</span>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            </div>
-                            </div>
-                        </div>
-                        </div>
-					</div>
+                              <div class="row g-3">
+                                  <div class="col-md-4 col-6">
+                                  <strong>Start Date:</strong><br>
+                                  <span>01 Jan 2025</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                  <strong>End Date:</strong><br>
+                                  <span>31 Dec 2025</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                  <strong>Payment Method:</strong><br>
+                                  <span>Credit Card</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                  <strong>Payment Status:</strong><br>
+                                  <span class="text-success">Paid</span>
+                                  </div>
+                                  <div class="col-md-4 col-6">
+                                  <strong>Amount Paid:</strong><br>
+                                  <span>₹5,000</span>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                          </div>
+                      </div>
+                      </div>
+                  </div>
                     
                 <!-- <div class="box"> -->
                     <div class="col-12 col-xl-12">
@@ -907,44 +1016,11 @@
   </div>
   <!-- /.content-wrapper -->
  
-  <footer class="main-footer">
-    <div class="pull-right d-flex d-sm-inline-block">
-        <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-		  <li class="nav-item">
-			Dashboard
-		  </li>
-		</ul>
-    </div>
-	  &copy;TelthAdminPanel. All Rights Reserved.
-  </footer>
+
 
 	
 	<!-- Page Content overlay -->
-	
-	
-	<!-- Vendor JS -->
-	<script src="js/vendors.min.js"></script>
-	<script src="js/template.js"></script>
-	<script src="js/apexcharts.js"></script>
-	<script src="js/pages/chart.js"></script>
-    <script src="js/pages/doctor-details.js"></script>
-	<script src="js/assets/vendor_components/apexcharts.js"></script>
-    <script src="js/assets/vendor_components/date-paginator/moment.min.js"></script>
-    <script src="js/assets/vendor_components/bootstrap-datepicker.min.js"></script>
-    <script src="js/assets/vendor_components/date-paginator/bootstrap-datepaginator.min.js"></script>
-    <script src="js/assets/vendor_components/OwlCarousel2/dist/owl.carousel.js"></script>
-    <script src="js/assets/vendor_components/fullcalendar/moment.min.js"></script>
-    <script src="js/assets/vendor_components/fullcalendar/fullcalendar.min.js"></script>
-    <script src="js/pages/calendar.js"></script>
-
-	<script src="js/pages/patient-details.js"></script>
-		
-	<!-- Vendor JS -->
-    <script src="js/pages/doctor-details.js"></script>
-	
-    <!-- <script src="js/datatable/datatables.min.js"></script> -->
-	<script src="js/pages/data-table.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 <!-- Mirrored from medical-admin-template.multipurposethemes.com/main/patient_details.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Jun 2025 06:15:49 GMT -->
